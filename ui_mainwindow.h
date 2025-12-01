@@ -35,10 +35,16 @@ public:
     QAction *actionCopy;
     QAction *actionAll;
     QAction *actionPaste;
+    QAction *actionInsertTable;
+    QAction *actionInsertRow;
+    QAction *actionInsertColumn;
+    QAction *actionDeleteRow;
+    QAction *actionDeleteColumn;
     QWidget *centralwidget;
     QMenuBar *menubar;
     QMenu *menu;
     QMenu *menu_2;
+    QMenu *menu_3;
     QStatusBar *statusbar;
     QToolBar *toolBar;
 
@@ -70,6 +76,16 @@ public:
         actionPaste = new QAction(filetoolbar);
         actionPaste->setObjectName("actionPaste");
         actionPaste->setMenuRole(QAction::MenuRole::NoRole);
+        actionInsertTable = new QAction(filetoolbar);
+        actionInsertTable->setObjectName("actionInsertTable");
+        actionInsertRow = new QAction(filetoolbar);
+        actionInsertRow->setObjectName("actionInsertRow");
+        actionInsertColumn = new QAction(filetoolbar);
+        actionInsertColumn->setObjectName("actionInsertColumn");
+        actionDeleteRow = new QAction(filetoolbar);
+        actionDeleteRow->setObjectName("actionDeleteRow");
+        actionDeleteColumn = new QAction(filetoolbar);
+        actionDeleteColumn->setObjectName("actionDeleteColumn");
         centralwidget = new QWidget(filetoolbar);
         centralwidget->setObjectName("centralwidget");
         filetoolbar->setCentralWidget(centralwidget);
@@ -80,6 +96,8 @@ public:
         menu->setObjectName("menu");
         menu_2 = new QMenu(menubar);
         menu_2->setObjectName("menu_2");
+        menu_3 = new QMenu(menubar);
+        menu_3->setObjectName("menu_3");
         filetoolbar->setMenuBar(menubar);
         statusbar = new QStatusBar(filetoolbar);
         statusbar->setObjectName("statusbar");
@@ -90,6 +108,7 @@ public:
 
         menubar->addAction(menu->menuAction());
         menubar->addAction(menu_2->menuAction());
+        menubar->addAction(menu_3->menuAction());
         menu->addAction(actionOpen);
         menu->addAction(actionClose);
         menu->addSeparator();
@@ -101,6 +120,13 @@ public:
         menu_2->addAction(actionCuT);
         menu_2->addAction(actionCopy);
         menu_2->addAction(actionAll);
+        menu_3->addAction(actionInsertTable);
+        menu_3->addSeparator();
+        menu_3->addAction(actionInsertRow);
+        menu_3->addAction(actionInsertColumn);
+        menu_3->addSeparator();
+        menu_3->addAction(actionDeleteRow);
+        menu_3->addAction(actionDeleteColumn);
         toolBar->addAction(actionNew);
         toolBar->addAction(actionOpen);
         toolBar->addAction(actionSave);
@@ -169,8 +195,29 @@ public:
 #if QT_CONFIG(shortcut)
         actionPaste->setShortcut(QCoreApplication::translate("filetoolbar", "Ctrl+V", nullptr));
 #endif // QT_CONFIG(shortcut)
+        actionInsertTable->setText(QCoreApplication::translate("filetoolbar", "\346\217\222\345\205\245\350\241\250\346\240\274(&I)", nullptr));
+#if QT_CONFIG(tooltip)
+        actionInsertTable->setToolTip(QCoreApplication::translate("filetoolbar", "\346\217\222\345\205\245\350\241\250\346\240\274", nullptr));
+#endif // QT_CONFIG(tooltip)
+        actionInsertRow->setText(QCoreApplication::translate("filetoolbar", "\346\226\260\345\242\236\344\270\200\350\241\214(&R)", nullptr));
+#if QT_CONFIG(tooltip)
+        actionInsertRow->setToolTip(QCoreApplication::translate("filetoolbar", "\346\226\260\345\242\236\344\270\200\350\241\214", nullptr));
+#endif // QT_CONFIG(tooltip)
+        actionInsertColumn->setText(QCoreApplication::translate("filetoolbar", "\346\226\260\345\242\236\344\270\200\345\210\227(&C)", nullptr));
+#if QT_CONFIG(tooltip)
+        actionInsertColumn->setToolTip(QCoreApplication::translate("filetoolbar", "\346\226\260\345\242\236\344\270\200\345\210\227", nullptr));
+#endif // QT_CONFIG(tooltip)
+        actionDeleteRow->setText(QCoreApplication::translate("filetoolbar", "\345\210\252\351\231\244\350\241\214(&D)", nullptr));
+#if QT_CONFIG(tooltip)
+        actionDeleteRow->setToolTip(QCoreApplication::translate("filetoolbar", "\345\210\252\351\231\244\350\241\214", nullptr));
+#endif // QT_CONFIG(tooltip)
+        actionDeleteColumn->setText(QCoreApplication::translate("filetoolbar", "\345\210\252\351\231\244\345\210\227(&L)", nullptr));
+#if QT_CONFIG(tooltip)
+        actionDeleteColumn->setToolTip(QCoreApplication::translate("filetoolbar", "\345\210\252\351\231\244\345\210\227", nullptr));
+#endif // QT_CONFIG(tooltip)
         menu->setTitle(QCoreApplication::translate("filetoolbar", "\346\252\224\346\241\210(&F)", nullptr));
         menu_2->setTitle(QCoreApplication::translate("filetoolbar", "\347\267\250\350\274\257(&E)", nullptr));
+        menu_3->setTitle(QCoreApplication::translate("filetoolbar", "\350\241\250\346\240\274(&T)", nullptr));
         toolBar->setWindowTitle(QCoreApplication::translate("filetoolbar", "toolBar", nullptr));
     } // retranslateUi
 
