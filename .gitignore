@@ -27,3 +27,4 @@ release/
 *.pro.user
 *.pro.user.*
 .qtcreator/
+_codeql_detected_source_root
