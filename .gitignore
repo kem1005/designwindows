@@ -39,3 +39,15 @@
 
 # debug information files
 *.dwo
+
+# Qt generated files
+ui_*.h
+moc_*.cpp
+moc_predefs.h
+.qmake.stash
+
+# Build artifacts
+Makefile
+Makefile.*
+build/
+designwindow
