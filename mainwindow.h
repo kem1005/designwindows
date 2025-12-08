@@ -4,13 +4,12 @@
 #include <QMainWindow>
 #include "ui_mainwindow.h"
 
-class mainwindow : public QMainWindow,
-                   public Ui_filetoolbar
+class MainWindow : public QMainWindow,public Ui_MainWindow
 {
     Q_OBJECT
 
 public:
-    mainwindow(QWidget *parent = nullptr);
-    ~mainwindow();
+    MainWindow(QWidget *parent = nullptr);
+    ~MainWindow();
 };
 #endif // MAINWINDOW_H
