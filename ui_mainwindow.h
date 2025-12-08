@@ -12,10 +12,12 @@
 #include <QtCore/QVariant>
 #include <QtGui/QAction>
 #include <QtWidgets/QApplication>
+#include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenu>
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QStatusBar>
+#include <QtWidgets/QTextEdit>
 #include <QtWidgets/QToolBar>
 #include <QtWidgets/QWidget>
 
@@ -41,6 +43,8 @@ public:
     QAction *actionDeleteRow;
     QAction *actionDeleteColumn;
     QWidget *centralwidget;
+    QHBoxLayout *horizontalLayout;
+    QTextEdit *textEdit;
     QMenuBar *menubar;
     QMenu *menu;
     QMenu *menu_2;
@@ -55,26 +59,59 @@ public:
         filetoolbar->resize(800, 600);
         actionNew = new QAction(filetoolbar);
         actionNew->setObjectName("actionNew");
+        QIcon icon;
+        icon.addFile(QString::fromUtf8(":/images/images/images/new.png"), QSize(), QIcon::Mode::Normal, QIcon::State::Off);
+        actionNew->setIcon(icon);
         actionOpen = new QAction(filetoolbar);
         actionOpen->setObjectName("actionOpen");
+        QIcon icon1;
+        icon1.addFile(QString::fromUtf8(":/images/images/images/open.png"), QSize(), QIcon::Mode::Normal, QIcon::State::Off);
+        actionOpen->setIcon(icon1);
         actionClose = new QAction(filetoolbar);
         actionClose->setObjectName("actionClose");
+        QIcon icon2;
+        icon2.addFile(QString::fromUtf8(":/images/images/images/close.png"), QSize(), QIcon::Mode::Normal, QIcon::State::Off);
+        actionClose->setIcon(icon2);
         actionSave = new QAction(filetoolbar);
         actionSave->setObjectName("actionSave");
+        QIcon icon3;
+        icon3.addFile(QString::fromUtf8(":/images/images/images/save.png"), QSize(), QIcon::Mode::Normal, QIcon::State::Off);
+        actionSave->setIcon(icon3);
         action_Asave = new QAction(filetoolbar);
         action_Asave->setObjectName("action_Asave");
+        QIcon icon4;
+        icon4.addFile(QString::fromUtf8(":/images/images/images/asave.png"), QSize(), QIcon::Mode::Normal, QIcon::State::Off);
+        action_Asave->setIcon(icon4);
         actionquit = new QAction(filetoolbar);
         actionquit->setObjectName("actionquit");
+        QIcon icon5;
+        icon5.addFile(QString::fromUtf8(":/images/images/images/off.png"), QSize(), QIcon::Mode::Normal, QIcon::State::Off);
+        actionquit->setIcon(icon5);
         actionUndo = new QAction(filetoolbar);
         actionUndo->setObjectName("actionUndo");
+        QIcon icon6;
+        icon6.addFile(QString::fromUtf8(":/images/images/images/undo.png"), QSize(), QIcon::Mode::Normal, QIcon::State::Off);
+        actionUndo->setIcon(icon6);
         actionCuT = new QAction(filetoolbar);
         actionCuT->setObjectName("actionCuT");
+        QIcon icon7;
+        icon7.addFile(QString::fromUtf8(":/images/images/images/cut.png"), QSize(), QIcon::Mode::Normal, QIcon::State::Off);
+        actionCuT->setIcon(icon7);
         actionCopy = new QAction(filetoolbar);
         actionCopy->setObjectName("actionCopy");
+        QIcon icon8;
+        icon8.addFile(QString::fromUtf8(":/images/images/images/copy.png"), QSize(), QIcon::Mode::Normal, QIcon::State::Off);
+        actionCopy->setIcon(icon8);
         actionAll = new QAction(filetoolbar);
         actionAll->setObjectName("actionAll");
+        QIcon icon9;
+        icon9.addFile(QString::fromUtf8(":/images/images/images/all.png"), QSize(), QIcon::Mode::Normal, QIcon::State::Off);
+        actionAll->setIcon(icon9);
         actionPaste = new QAction(filetoolbar);
         actionPaste->setObjectName("actionPaste");
+        QIcon icon10;
+        icon10.addFile(QString::fromUtf8(":/images/images/images/paste.png"), QSize(), QIcon::Mode::Normal, QIcon::State::Off);
+        actionPaste->setIcon(icon10);
         actionPaste->setMenuRole(QAction::MenuRole::NoRole);
         actionInsertTable = new QAction(filetoolbar);
         actionInsertTable->setObjectName("actionInsertTable");
@@ -88,6 +125,13 @@ public:
         actionDeleteColumn->setObjectName("actionDeleteColumn");
         centralwidget = new QWidget(filetoolbar);
         centralwidget->setObjectName("centralwidget");
+        horizontalLayout = new QHBoxLayout(centralwidget);
+        horizontalLayout->setObjectName("horizontalLayout");
+        textEdit = new QTextEdit(centralwidget);
+        textEdit->setObjectName("textEdit");
+
+        horizontalLayout->addWidget(textEdit);
+
         filetoolbar->setCentralWidget(centralwidget);
         menubar = new QMenuBar(filetoolbar);
         menubar->setObjectName("menubar");
