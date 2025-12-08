@@ -1,0 +1,18 @@
+<RCC>
+  <qresource prefix="images">
+    <file>images/images/all.png</file>
+    <file>images/images/off.png</file>
+    <file>images/images/close.png</file>
+    <file>images/images/asave.png</file>
+    <file>images/images/copy.png</file>
+    <file>images/images/cut.png</file>
+    <file>images/images/designwindow.qrc</file>
+    <file>images/images/editor.png</file>
+    <file>images/images/find.png</file>
+    <file>images/images/new.png</file>
+    <file>images/images/open.png</file>
+    <file>images/images/paste.png</file>
+    <file>images/images/save.png</file>
+    <file>images/images/undo.png</file>
+  </qresource>
+</RCC>

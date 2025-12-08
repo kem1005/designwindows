@@ -82,6 +82,10 @@
    <addaction name="actionPaste"/>
   </widget>
   <action name="actionNew">
+   <property name="icon">
+    <iconset resource="designwindow.qrc">
+     <normaloff>:/images/images/images/new.png</normaloff>:/images/images/images/new.png</iconset>
+   </property>
    <property name="text">
     <string>新增(&amp;N)</string>
    </property>
@@ -90,6 +94,10 @@
    </property>
   </action>
   <action name="actionOpen">
+   <property name="icon">
+    <iconset resource="designwindow.qrc">
+     <normaloff>:/images/images/images/open.png</normaloff>:/images/images/images/open.png</iconset>
+   </property>
    <property name="text">
     <string>開啟(&amp;O)</string>
    </property>
@@ -98,6 +106,10 @@
    </property>
   </action>
   <action name="actionClose">
+   <property name="icon">
+    <iconset resource="designwindow.qrc">
+     <normaloff>:/images/images/images/close.png</normaloff>:/images/images/images/close.png</iconset>
+   </property>
    <property name="text">
     <string>關閉(&amp;C)</string>
    </property>
@@ -106,6 +118,10 @@
    </property>
   </action>
   <action name="actionSave">
+   <property name="icon">
+    <iconset resource="designwindow.qrc">
+     <normaloff>:/images/images/images/save.png</normaloff>:/images/images/images/save.png</iconset>
+   </property>
    <property name="text">
     <string>儲存(&amp;S)</string>
    </property>
@@ -114,6 +130,10 @@
    </property>
   </action>
   <action name="action_Asave">
+   <property name="icon">
+    <iconset resource="designwindow.qrc">
+     <normaloff>:/images/images/images/asave.png</normaloff>:/images/images/images/asave.png</iconset>
+   </property>
    <property name="text">
     <string>另存(&amp;A)</string>
    </property>
@@ -122,6 +142,10 @@
    </property>
   </action>
   <action name="actionquit">
+   <property name="icon">
+    <iconset resource="designwindow.qrc">
+     <normaloff>:/images/images/images/off.png</normaloff>:/images/images/images/off.png</iconset>
+   </property>
    <property name="text">
     <string>退出(&amp;X)</string>
    </property>
@@ -130,6 +154,10 @@
    </property>
   </action>
   <action name="actionUndo">
+   <property name="icon">
+    <iconset resource="designwindow.qrc">
+     <normaloff>:/images/images/images/undo.png</normaloff>:/images/images/images/undo.png</iconset>
+   </property>
    <property name="text">
     <string>還原(&amp;U)</string>
    </property>
@@ -138,6 +166,10 @@
    </property>
   </action>
   <action name="actionCuT">
+   <property name="icon">
+    <iconset resource="designwindow.qrc">
+     <normaloff>:/images/images/images/cut.png</normaloff>:/images/images/images/cut.png</iconset>
+   </property>
    <property name="text">
     <string>剪下(&amp;T)</string>
    </property>
@@ -149,6 +181,10 @@
    </property>
   </action>
   <action name="actionCopy">
+   <property name="icon">
+    <iconset resource="designwindow.qrc">
+     <normaloff>:/images/images/images/copy.png</normaloff>:/images/images/images/copy.png</iconset>
+   </property>
    <property name="text">
     <string>複製(&amp;C)</string>
    </property>
@@ -157,6 +193,10 @@
    </property>
   </action>
   <action name="actionAll">
+   <property name="icon">
+    <iconset resource="designwindow.qrc">
+     <normaloff>:/images/images/images/all.png</normaloff>:/images/images/images/all.png</iconset>
+   </property>
    <property name="text">
     <string>全選(&amp;A)</string>
    </property>
@@ -165,6 +205,10 @@
    </property>
   </action>
   <action name="actionPaste">
+   <property name="icon">
+    <iconset resource="designwindow.qrc">
+     <normaloff>:/images/images/images/paste.png</normaloff>:/images/images/images/paste.png</iconset>
+   </property>
    <property name="text">
     <string>貼上(&amp;P)</string>
    </property>
@@ -219,6 +263,8 @@
    </property>
   </action>
  </widget>
- <resources/>
+ <resources>
+  <include location="designwindow.qrc"/>
+ </resources>
  <connections/>
 </ui>
